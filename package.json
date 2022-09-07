@@ -1,0 +1,36 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "My personal website package",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "postcss:watch": "postcss src/devstyle.css -o src/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basileus1990/Personal-Website.git"
+  },
+  "keywords": [
+    "Personal",
+    "website"
+  ],
+  "author": "Paweł Bogdanowicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Basileus1990/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/Basileus1990/Personal-Website#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.23.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.8.0",
+    "prettier": "^2.7.1"
+  }
+}
