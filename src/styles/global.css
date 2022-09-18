@@ -1,5 +1,9 @@
 html {
+  scroll-behavior: smooth;
   background: linear-gradient(345deg, rgb(24, 24, 24) 0%, rgb(11, 11, 11) 100%);
-
   color: white;
+
+  & body {
+    position: relative;
+  }
 }
