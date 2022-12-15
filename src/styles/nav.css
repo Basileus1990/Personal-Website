@@ -2,7 +2,11 @@ nav {
   position: sticky;
   z-index: 1000;
   top: 0px;
+
   height: 5rem;
+  display: flex;
+
+  font-family: Arial, Helvetica, sans-serif;
 
   background: linear-gradient(
     200deg,
@@ -26,17 +30,29 @@ nav {
   }
 }
 
-/* flex display */
-.wide-nav {
+.menu-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 3px 8px;
+
+  display: block;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition-duration: 0.2s;
+  transform: scale(1.1);
+}
+
+#menu-button-checkbox {
+  display: none;
+}
+
+#menu-button-checkbox:checked + .nav-buttons {
   display: flex;
-  height: 100%;
-
-  /* margin: auto 10%; */
-  @media (max-width: 1200px) {
-    margin: auto 5%;
-  }
-
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .name-heading-space {
@@ -56,6 +72,66 @@ nav {
 
 /* Navigation links area */
 .nav-buttons {
-  margin: auto;
-  flex: 1;
+  position: absolute;
+  right: 1.5rem;
+  top: 4.5rem;
+
+  transition-duration: 0.2s;
+
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  padding: 1.4rem;
+
+  border: 3px solid rgb(55, 38, 83);
+  background: linear-gradient(
+    200deg,
+    rgba(55, 0, 94, 1) 0%,
+    rgba(16, 0, 44, 1) 100%
+  );
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+
+    border: solid 2px rgb(55, 43, 77);
+    box-shadow: 0px 0px 6px rgb(46, 46, 46);
+    background: linear-gradient(
+      200deg,
+      rgb(37, 37, 37) 0%,
+      rgb(17, 17, 17) 100%
+    );
+
+    & li {
+      /* padding: 0.4rem; */
+      padding-bottom: 0.4rem;
+      padding-top: 0.4rem;
+      padding-left: 0.8rem;
+      padding-bottom: 0.4rem;
+
+      text-shadow: 2px 2px 6px rgb(110, 110, 110);
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .menu-button {
+    display: none;
+  }
+
+  .nav-buttons {
+    margin: auto;
+    flex: 1;
+    padding: 0;
+
+    & li {
+      display: block;
+      list-style: none;
+    }
+  }
 }

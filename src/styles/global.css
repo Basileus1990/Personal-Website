@@ -16,6 +16,7 @@
   text-decoration: none;
   text-shadow: 2px 2px 3px rgb(67, 67, 67);
   font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
 
   transition: all 0.2s;
   &:hover {
