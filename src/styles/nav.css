@@ -7,7 +7,7 @@ nav {
   z-index: 1000;
   top: 0px;
 
-  height: 5rem;
+  height: 5.4rem;
   display: flex;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -107,7 +107,7 @@ nav {
   overflow-y: hidden;
   padding: 1.4rem;
 
-  border: 5px solid rgb(55, 38, 83);
+  border: 5px solid rgba(70, 48, 105, 0.8);
   background: linear-gradient(200deg, rgb(55, 0, 94) 0%, rgb(16, 0, 44) 100%);
 
   & a {

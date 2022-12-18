@@ -23,3 +23,12 @@
     transform: scale(1.2);
   }
 }
+
+.section-heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.big {
+  font-size: 3rem;
+  color: rgb(152, 115, 255);
+}
