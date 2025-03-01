@@ -1,1 +1,10 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Editor directories and settings
+.vscode/
+.idea/
