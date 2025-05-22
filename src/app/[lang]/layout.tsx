@@ -1,6 +1,8 @@
 
-import { Locale } from '@/lib/translations';
+import { getTranslations, Locale, Translations } from '@/lib/translations';
 import '../globals.css';
+import NavLink from '@/app/components/navLink';
+import LanguageSwitcher from '@/app/components/languageSwitcher';
 
 export const metadata = {
   title: 'My Portfolio',
@@ -17,10 +19,140 @@ export default async function LanguageLayout({
   params,
 }: LanguageLayoutProps) {
   const { lang } = await params;
+  const t: Translations = await getTranslations(lang);
+
   return (
     <html lang={lang}>
-      <body>
-        {children}
+      <body className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
+        <div className="flex flex-col min-h-screen">
+
+          <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex items-center justify-between">
+
+                {/* Main header */}
+                <h1 className="text-2xl sm:text-3xl font-bold">
+                  <a
+                    href={`/${lang}/`}
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+                  >
+                    Paweł Bogdanowicz
+                  </a>
+                </h1>
+
+                {/* Navigation bar */}
+                <nav className="hidden md:flex space-x-4">
+                  <ul className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 py-3">
+                    <li>
+                      <NavLink name={t.nav.about} href={`/${lang}#about`} />
+                    </li>
+                    <li>
+                      <NavLink name={t.nav.projects} href={`/${lang}#projects`} />
+                    </li>
+                    <li>
+                      <NavLink name={t.nav.contact} href={`/${lang}#contact`} />
+                    </li>
+                    <li>
+                      <LanguageSwitcher currentLang={lang} />
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
+
+          {/* 2. Navigation Section */}
+          {/* Often placed within the header or directly below it */}
+          <nav className="bg-gray-700 dark:bg-gray-950 text-white">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <ul className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 py-3">
+                {/*
+                  Adjust hrefs based on your actual routing.
+                  Example: /en/, /en/about, etc.
+                */}
+                <li>
+                  <a
+                    href={`/${lang}/`}
+                    className="hover:bg-gray-600 dark:hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`/${lang}/about`}
+                    className="hover:bg-gray-600 dark:hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    About Me
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`/${lang}/projects`}
+                    className="hover:bg-gray-600 dark:hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`/${lang}/blog`} // Optional
+                    className="hover:bg-gray-600 dark:hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`/${lang}/contact`}
+                    className="hover:bg-gray-600 dark:hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
+                {/* You might also add a language switcher component here */}
+              </ul>
+            </div>
+          </nav>
+
+          {/* 3. Main Content Area */}
+          {/* This is where the specific page content ({children}) will be rendered */}
+          <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            {children}
+          </main>
+
+          {/* 4. Footer Section */}
+          <footer className="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-8 mt-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="mb-2">© {new Date().getFullYear()} Paweł Bogdanowicz. All rights reserved.</p>
+              {/* Optional: Add social media links, credits, etc. */}
+              <div className="flex justify-center space-x-4">
+                <a
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white dark:hover:text-blue-400 transition-colors"
+                  aria-label="GitHub Profile"
+                >
+                  {/* SVG Icon for GitHub or text */}
+                  GitHub
+                </a>
+                <a
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white dark:hover:text-blue-400 transition-colors"
+                  aria-label="LinkedIn Profile"
+                >
+                  {/* SVG Icon for LinkedIn or text */}
+                  LinkedIn
+                </a>
+                {/* Add more social links as needed */}
+              </div>
+            </div>
+          </footer>
+
+        </div> {/* End of .flex .flex-col .min-h-screen */}
       </body>
     </html>
   );

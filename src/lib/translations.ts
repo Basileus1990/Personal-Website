@@ -9,10 +9,10 @@ export const supportedLocales: string[] = Object.values(Locale);
 export const defaultLocale: Locale = Locale.PL;
 
 export interface Translations {
-    welcomeMessage: string;
-    language: string;
-    test: {
-        test: string;
+    nav: {
+        about: string;
+        projects: string;
+        contact: string;
     }
 }
 

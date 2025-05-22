@@ -27,6 +27,60 @@ export default async function HomePage({ params }: LangHomePageProps) {
       <h1>{t.welcomeMessage}</h1>
 
       <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+      <p>Current Language Code: {lang}</p>
+
 
       {/* We will add the language switcher component here */}
       {/* Since the switcher needs browser interaction (links), it will be a Client Component */}

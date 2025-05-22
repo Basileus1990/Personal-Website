@@ -1,4 +1,7 @@
 {
-    "welcomeMessage": "Hello, this is a test message.",
-    "language": "English"
+    "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    }
 }

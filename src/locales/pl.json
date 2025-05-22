@@ -1,4 +1,7 @@
 {
-    "welcomeMessage": "Witam, to jest wiadomość testowa.",
-    "language": "Polski"
+    "nav": {
+        "about": "O mnie",
+        "projects": "Projekty",
+        "contact": "Kontakt"
+    }
 }
